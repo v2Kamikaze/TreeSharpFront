@@ -24,17 +24,30 @@ export default function Form({ color }: FormProps) {
   }
 
   return (
-    <form className="flex flex-col">
+    <form id= "Forms-Nó" className="">
+      <div className="flex flex-col item-center items-center m-2 p-2">
       <input
-        className="w-48 shadow-md rounded-md m-4"
+        className="w-fill rounded-md m-4 text-center border-2 hover:border-rose-300"
         type="text"
-        placeholder="Texto"
+        placeholder="Adicione um Nó"
         value={inputText}
         onChange={onChangeInputId}
       />
-      <button type="submit" onClick={onClick}>
-        Clique aqui
-      </button>
+      <div className="flex flex-row space-x-0.5 text-slate-100">
+        <button type="submit" 
+        onClick={onClick} 
+        className="rounded-s-lg bg-green-500 p-2 m-1 hover:shadow-lg hover:shadow-green-700">
+          Adicionar Nó
+        </button>
+        <button type="submit" 
+        onClick={onClick} 
+        className=" rounded-r-lg bg-red-600 p-2 m-1 hover:shadow-lg hover:shadow-red-900">
+          Remover Nó
+        </button>
+      </div>
+      </div>
+      
+      
     </form>
   );
 }
