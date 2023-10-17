@@ -24,10 +24,12 @@ export default function Home() {
   ];
 
   return (
-    <main className="">
-      <Form color="skaopska" />
-      <nav className="flex x sjustify-between max-md:flex-col">
-        TesteSite
+    
+    <body>
+        <header>
+          <nav>
+          <nav className="flex x sjustify-between max-md:flex-col">
+        
         <ul className="flepace-x-4 m-4 pt">
           {headerActions.map(({ label, link }, idx) => (
             <li key={idx}>
@@ -36,6 +38,19 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-    </main>
+          </nav>
+        </header>
+        <main className="">
+          
+          <div className="flex-col bg-blue-100 rounded-md p-4">
+            <h1 className="text-center text-3xl">
+              Adicionando Nós à Árvore 
+            </h1>
+            <Form color="" />
+          </div>
+        
+        </main>
+    </body>
+    
   );
 }
